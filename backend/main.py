@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from .database.database import init_db
-from routes import models, training, detection
+from .routes import models, training, detection
 import uvicorn
 
 app = FastAPI(title="Sign Recognition API", version="1.0.0")
