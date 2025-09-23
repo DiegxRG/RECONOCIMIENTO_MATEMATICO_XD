@@ -13,9 +13,9 @@ def run_server():
         
         subprocess.run([
     sys.executable, "-m", "uvicorn", 
-    "backend.main:app",  # ✅ ruta correcta
-    "--host", "0.0.0.0", 
-    "--port", "8000", 
+    "backend.main:app",
+    "--host", "0.0.0.0",
+    "--port", os.environ.get("PORT", "8000"),
     "--reload"
 ])
 
